@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Survey Form</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header>
+            <h1 id="title">Game Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the game!</p>
+        </header>
+        <main>
+            <form action="none" method="post" id="survey-form">
+                <div class="input-group">
+                    <label for="name" id="name-label">
+                        Username
+                        <input type="text" name="name-input" id="name" placeholder="Enter your username" required>
+                    </label>
+                    <label for="email" id="email-label">
+                        Account Email
+                        <input type="email" name="email-input" id="email" placeholder="Enter your Email" required>
+                    </label>
+                    <label for="number" id="number-label">
+                        User level (optional)
+                        <input type="number" name="number-input" id="number" placeholder="Level" min="1" max="120">
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="dropdown">
+                        On which platform do you play?
+                        <select name="dropdown-select" id="dropdown" required>
+                            <option value="none" disabled selected>Select platform</option>
+                            <option value="PlayStation">PlayStation</option>
+                            <option value="Xbox">Xbox</option>
+                            <option value="PC">PC</option>
+                            <option value="Android">Android</option>
+                            <option value="IOS">IOS</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <p>Would you recommend the game to a friend?</p>
+                    <label for="definitely-input">
+                        <input type="radio" name="radio-recommend" id="definitely-input" value="Definitely" checked>
+                        Definitely
+                    </label>
+                    <label for="maybe-input">
+                        <input type="radio" name="radio-recommend" id="maybe-input" value="Maybe">
+                        Maybe
+                    </label>
+                    <label for="not-sure-input">
+                        <input type="radio" name="radio-recommend" id="not-sure-input" value="Not sure">
+                        Not sure
+                    </label>
+                </div>
+                <div class="input-group">
+                    <p>What aspects of the game did you like? <small>(Check all that apply)</small></p>
+                    <label for="mechanics-input">
+                        <input type="checkbox" name="mechanics" id="mechanics-input" value="mechanics">
+                        Mechanics
+                    </label>
+                    <label for="characters-input">
+                        <input type="checkbox" name="characters" id="characters-input" value="characters">
+                        Characters designs
+                    </label><label for="soundtrack-input">
+                        <input type="checkbox" name="soundtrack" id="soundtrack-input" value="soundtrack">
+                        Soundtrack
+                    </label><label for="difficulty-input">
+                        <input type="checkbox" name="difficulty" id="difficulty-input" value="difficulty">
+                        Difficulty
+                    </label><label for="progression-input">
+                        <input type="checkbox" name="progression" id="progression-input" value="progression">
+                        Progression system
+                    </label><label for="pvp-input">
+                        <input type="checkbox" name="pvp" id="pvp-input" value="pvp">
+                        PVP
+                    </label><label for="events-input">
+                        <input type="checkbox" name="events" id="events-input" value="events">
+                        Events
+                    </label><label for="farming-input">
+                        <input type="checkbox" name="farming" id="farming-input" value="farming">
+                        Farming system
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="additional-comments">
+                        Any comments or suggestions?
+                        <textarea name="comments-textarea" id="additional-comments" cols="30" rows="4"></textarea>
+                    </label>
+                </div>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </main>
+    </div>
+
 </body>
+
 </html>
